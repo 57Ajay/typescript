@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.guitarist = exports.dev = exports.Coder = void 0;
+exports.Bands = exports.Peeps = exports.Guitarist1 = exports.Dev = exports.Coder = void 0;
 class Coder {
     constructor(name, age, lang, projects) {
         this.name = name;
@@ -23,7 +23,7 @@ class Coder {
 }
 exports.Coder = Coder;
 ;
-class dev extends Coder {
+class Dev extends Coder {
     constructor(name, age, lang, projects) {
         super(name, age, lang, projects);
     }
@@ -32,9 +32,9 @@ class dev extends Coder {
     }
     ;
 }
-exports.dev = dev;
+exports.Dev = Dev;
 ;
-class guitarist {
+class Guitarist1 {
     constructor(name, instrument) {
         this.name = name;
         this.instrument = instrument;
@@ -43,5 +43,46 @@ class guitarist {
         return `${this.name} is ${action}ing`;
     }
 }
-exports.guitarist = guitarist;
+exports.Guitarist1 = Guitarist1;
+;
+//////////////////////////////////////////////////////////////////
+class Peeps {
+    // static applies to the class directly
+    // exp:  Peeps.getCount()
+    // not if we do it on an instance
+    // like const peeps = new Peeps();
+    // peeps.getCount(), this is wrong.
+    static getCount() {
+        return Peeps.count;
+    }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+}
+exports.Peeps = Peeps;
+Peeps.count = 0;
+////////////////////////////////////////////////////////////
+class Bands {
+    constructor() {
+        this.dataState = [];
+    }
+    get data() {
+        return this.dataState;
+    }
+    ;
+    set data(value) {
+        if (Array.isArray(value) && value.every((el) => typeof el === 'string')) {
+            this.dataState = value;
+            return;
+        }
+        else {
+            throw new Error('Param is not an array of strings');
+        }
+        ;
+    }
+    ;
+}
+exports.Bands = Bands;
 ;

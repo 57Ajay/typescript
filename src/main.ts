@@ -1,4 +1,4 @@
-import { Coder, dev, guitarist } from "./classes";
+import { Coder, Dev, Guitarist1, Peeps, Bands} from "./classes";
 
 const sum = (a: number, b: number) => a + b;
 console.log(sum(1, 2));
@@ -173,8 +173,19 @@ const coder = new Coder("Ajay", 21, "JavaScript", ["Angular", "React"]);
 coder.greet();
 coder.work();
 
-const Dev = new dev("Ajay", 21, "JavaScript", ["Angular", "React"]);
+const dev = new Dev("Ajay", 21, "JavaScript", ["Angular", "React"]);
 
-const Guitarist = new guitarist("Ajay", "Guitar");
+const guitarist = new Guitarist1("Ajay", "Guitar");
 
-Guitarist.play("playing guitar");
+guitarist.play("playing guitar");
+
+const peeps = new Peeps("Ajay");
+console.log(peeps.id);
+console.log(Peeps.getCount());
+
+const bands = new Bands();
+bands.data = ["Ajay", "vijay"];
+console.log(bands.data);
+
+bands.data = [...bands.data, "Aman"];
+console.log(bands.data);

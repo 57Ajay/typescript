@@ -13,7 +13,7 @@ export class Coder{
     };
 };
 
-export class dev extends Coder{
+export class Dev extends Coder{
     constructor(name: string, age: number, lang: string, projects: string[]){
         super(name, age, lang, projects);
     }
@@ -30,7 +30,7 @@ interface Musicians{
     play: (action: string) => String
 };
 
-export class guitarist implements Musicians{
+export class Guitarist1 implements Musicians{
     name: string;
     instrument: string;
     constructor(name: string, instrument: string){
@@ -41,3 +41,46 @@ export class guitarist implements Musicians{
         return `${this.name} is ${action}ing`;
     }
 };
+
+//////////////////////////////////////////////////////////////////
+
+export class Peeps {
+    static count: number = 0;
+    // static applies to the class directly
+    // exp:  Peeps.getCount()
+    // not if we do it on an instance
+    // like const peeps = new Peeps();
+    // peeps.getCount(), this is wrong.
+
+
+    static getCount(): number {
+        return Peeps.count;
+    }
+    public id: number;
+    constructor(public name: string) {
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+}
+
+////////////////////////////////////////////////////////////
+
+export class Bands{
+    private dataState: string[];
+    constructor(){
+        this.dataState = [];
+    }
+    public get data(): string[]{
+        return this.dataState;
+    };
+
+    public set data(value: string[]){
+        if(Array.isArray(value) && value.every((el: string) => typeof el === 'string')){
+            this.dataState = value;
+            return;
+        }else{
+            throw new Error('Param is not an array of strings');
+        };
+    };
+};
+
