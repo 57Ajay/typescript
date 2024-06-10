@@ -1,3 +1,4 @@
+import { Coder, dev, guitarist } from "./classes";
 
 const sum = (a: number, b: number) => a + b;
 console.log(sum(1, 2));
@@ -167,3 +168,13 @@ console.log(`${addOrConcat(1, 2, 'add')}, ${addOrConcat(1, 2, 'concat')}`);
 let result : string = addOrConcat(2, 2, 'concat') as string;
 
 console.log(result);
+const coder = new Coder("Ajay", 21, "JavaScript", ["Angular", "React"]);
+
+coder.greet();
+coder.work();
+
+const Dev = new dev("Ajay", 21, "JavaScript", ["Angular", "React"]);
+
+const Guitarist = new guitarist("Ajay", "Guitar");
+
+Guitarist.play("playing guitar");

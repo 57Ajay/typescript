@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const classes_1 = require("./classes");
 const sum = (a, b) => a + b;
 console.log(sum(1, 2));
 const arr = ["Ajay", "Aman", "vijay"];
@@ -111,3 +113,9 @@ const addOrConcat = (a, b, c) => {
 console.log(`${addOrConcat(1, 2, 'add')}, ${addOrConcat(1, 2, 'concat')}`);
 let result = addOrConcat(2, 2, 'concat');
 console.log(result);
+const coder = new classes_1.Coder("Ajay", 21, "JavaScript", ["Angular", "React"]);
+coder.greet();
+coder.work();
+const Dev = new classes_1.dev("Ajay", 21, "JavaScript", ["Angular", "React"]);
+const Guitarist = new classes_1.guitarist("Ajay", "Guitar");
+Guitarist.play("playing guitar");
