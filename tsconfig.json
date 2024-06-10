@@ -108,5 +108,5 @@
   },
   "include": [
     "src"
-  ]
+, "build/js/classes.js"  ]
 }
