@@ -8,7 +8,7 @@ type ButtonProps = {
 const Button1 = ({ style } : ButtonProps) => {
 
   return (
-    <button style={style}>
+    <button className="rounded p-1 font-semibold" style={style}>
         click me
     </button>
   )

@@ -7,8 +7,8 @@ type ButtonProps = {
 const Button3 = ({ onClick } : ButtonProps) => {
 
   return (
-    <button onClick={onClick}>
-        click me
+    <button className="bg-slate-600 rounded p-4" onClick={onClick}>
+        Button 3
     </button>
   )
 }

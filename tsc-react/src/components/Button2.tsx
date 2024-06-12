@@ -7,7 +7,7 @@ type ButtonProps = {
 const Button2 = ({ borderRadius } : ButtonProps) => {
 
   return (
-    <><button className='bg-white' style={borderRadius}>
+    <><button className='bg-white rounded p-2' style={borderRadius}>
           click me here
       </button></>
   )
