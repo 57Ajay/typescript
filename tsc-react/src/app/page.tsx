@@ -6,6 +6,7 @@ import Button3 from "@/components/Button3"
 import Button4 from "@/components/Button4";
 import Button5 from "@/components/Button5";
 import Button6 from "@/components/Button6";
+import Button7 from "@/components/Button7";
 import { useState } from "react";
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -31,7 +32,8 @@ const Home = () => {
         <Button3 onClick={onclick}/><br />
         <Button4> Hello! There</Button4><br />
         <Button5 count={count} setCount={setCount} /><br />
-        <Button6 type="submit" autoFocus={true} defaultValue="test" />
+        <Button6 type="submit" autoFocus={true} defaultValue="test" /><br />
+        <Button7 countValue={5} countHistory={[2, 4]}/>
       </main>
     </div>
   )
