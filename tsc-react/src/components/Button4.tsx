@@ -4,11 +4,11 @@ type ButtonProps = {
     
 };
 
-const Button4 = ({  } : ButtonProps) => {
+const Button4 = ({ children } : ButtonProps) => {
 
   return (
     <button >
-        click me
+        {children}
     </button>
   )
 }
